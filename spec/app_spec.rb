@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require_relative '../app'
 
 RSpec.describe 'MS Recipes' do
   def app

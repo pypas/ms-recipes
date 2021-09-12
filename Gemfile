@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org/'
 
+gem 'contentful'
+gem 'dotenv'
 gem 'sinatra'
 
 group :test do
