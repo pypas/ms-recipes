@@ -8,11 +8,19 @@ Dotenv.load
 # Service to retrieve data from Contentful
 class ContentfulService
   class << self
-    def get_entries(type)
-      Contentful::Client.new(
+    def client
+      @client ||= Contentful::Client.new(
         space: ENV['SPACE_ID'],
         access_token: ENV['ACCESS_TOKEN']
-      ).entries(content_type: type)
+      )
+    end
+
+    def get_entries(type)
+      client.entries(content_type: type)
+    end
+
+    def get_entry(id)
+      client.entry(id)
     end
   end
 end

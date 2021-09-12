@@ -1,0 +1,12 @@
+<h1><%= @recipe.title %></h1>
+<img src='<%= @recipe.photo.url %>'><br>
+<%= @recipe.description %><br>
+<% if @recipe.fields[:tags] != nil %>
+    Tags: <% @recipe.tags.each do |tag| %>
+        <li><%= tag.name %></li>
+    <% end %>
+<% end %>
+<% if @recipe.fields[:chef] != nil %>
+    Chef: <%= @recipe.chef.name %><br>
+<% end %>
+<a href='/'>Back</a>
