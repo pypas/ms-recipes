@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'redcarpet'
 
 # Helper to parse markdown to html

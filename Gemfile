@@ -4,10 +4,11 @@ source 'https://rubygems.org/'
 
 gem 'contentful'
 gem 'dotenv'
-gem 'sinatra'
 gem 'redcarpet'
+gem 'sinatra'
 
 group :test do
+  gem 'capybara'
   gem 'rack-test'
   gem 'rspec'
 end

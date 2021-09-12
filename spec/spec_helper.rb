@@ -2,6 +2,8 @@
 
 ENV['APP_ENV'] = 'test'
 
+require 'capybara'
+require 'capybara/rspec'
 require 'rspec'
 require 'rack/test'
 
