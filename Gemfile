@@ -5,6 +5,7 @@ source 'https://rubygems.org/'
 gem 'contentful'
 gem 'dotenv'
 gem 'sinatra'
+gem 'redcarpet'
 
 group :test do
   gem 'rack-test'

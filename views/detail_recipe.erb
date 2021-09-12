@@ -1,12 +1,18 @@
-<h1><%= @recipe.title %></h1>
-<img src='<%= @recipe.photo.url %>'><br>
-<%= @recipe.description %><br>
+<img src="<%= @recipe.photo.url %>" class="rounded mx-auto d-block" width=50% alt="<%= @recipe.title %>">
+<h1><%= @recipe.title %> </h1>
 <% if @recipe.fields[:tags] != nil %>
-    Tags: <% @recipe.tags.each do |tag| %>
-        <li><%= tag.name %></li>
+    Tags:
+    <% @recipe.tags.each do |tag| %>
+        <span class="badge bg-primary"><%= tag.name %></span>
     <% end %>
+    <br>
 <% end %>
+ <hr class="my-4">
+<h2>Description</h2>
+<%= MarkdownHelper.parse(@recipe.description) %>
 <% if @recipe.fields[:chef] != nil %>
-    Chef: <%= @recipe.chef.name %><br>
+    <b>Chef: <%= @recipe.chef.name %></b>
 <% end %>
-<a href='/'>Back</a>
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+    <a href="/" class="btn btn-secondary">Back</a>
+</div>
